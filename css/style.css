@@ -609,7 +609,9 @@ body::before{
   }
   
   .wendo-carousel .wcard {
-    width: 350px;
+    position:absolute;
+    height: 400px;
+    width: 300px;
     padding: 0.7rem;
     border-radius: 14px;
   }
