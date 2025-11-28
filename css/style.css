@@ -537,7 +537,18 @@ body::before{
 
 /* ========== MOBILE FIX: RESET DESKTOP CAROUSEL ========== */
 @media (max-width:750px){
-
+  /* GENERAL */
+  .container{padding:1.25rem 1.1rem;}
+  .menu-toggle{display:inline-block;}
+  .main-nav{
+    position:absolute; top:64px; left:0; right:0;
+    display:none; flex-direction:column; gap:0.6rem;
+    padding:0.8rem 1.2rem;
+    background:rgba(6,8,20,0.96);
+    border-bottom:1px solid rgba(148,163,184,0.45);
+  }
+  .main-nav.open{display:flex;}
+  .skills-grid{grid-template-columns:1fr;}
   /* MOBILE OVERRIDE FOR PROJECT CARDS */
   .wendo-carousel{
     height: 500px; /* shrink carousel height so cards fit better */
