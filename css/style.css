@@ -610,36 +610,40 @@ body::before{
 
 @media (max-width:750px) {
 
-  /* Wendo carousel card (25% bigger than 170px → 210px) */
+@media (max-width:750px) {
+
+  /* Increase Wendo Carousel card size by 35% */
   .wendo-carousel .wcard {
-    width: 210px;
-    padding: 0.7rem;
-    border-radius: 12px;
+    width: 230px;        /* was 170px */
+    padding: 0.75rem;    
+    border-radius: 14px;
   }
 
-  /* Slightly bigger title text */
+  /* Title text */
   .wendo-carousel .wcard h3 {
     font-size: 1.1rem;
     text-align: center;
   }
 
-  /* Slightly bigger description text */
+  /* Description text */
   .wendo-carousel .wcard p {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     text-align: left;
     line-height: 1.35;
   }
 
-  /* Increase image size by 25% as well */
+  /* Increase image size by 35% */
   .wendo-carousel .wcard .wimg {
     width: 100%;
-    max-width: 125px;     /* previously 100px → +25% */
-    height: 85px;         /* previously 70px → +25% */
+    max-width: 135px;   /* was 100px */
+    height: 95px;       /* was 70px */
     margin: 0 auto 0.6rem auto;
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
+    border-radius: 12px;
   }
+}
+
 }
 
 }
