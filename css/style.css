@@ -597,7 +597,7 @@ body::before{
   }
   
   .wendo-carousel .wcard {      
-    height: 500px;       
+    height: 425px;       
     padding: 0.9rem;
     left: 50%;
     transform: translateX(-50%);
@@ -618,15 +618,24 @@ body::before{
     text-align: center;
     overflow-wrap: break-word;
   }
-
+  
+  .wcard.left {
+    opacity: 0 !important;
+  }
+  
   .wcard.center {
     /* left: 50% !important;
     transform: translateX(-50%) !important; */
     opacity: 1 !important;
+    overflow-wrap: break-word;
     /* z-index: 2; */
     background:rgba(10,10,20,0.75);  /* 90% opaque */
     border:1px solid rgba(255,255,255,0.50);
     backdrop-filter:blur(50px);
+  }
+  
+  .wcard.right {
+    opacity: 0 !important;
   }
 }
 
