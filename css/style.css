@@ -608,37 +608,18 @@ body::before{
     margin: 0 auto;
   }
   
-  /* Increase Wendo Carousel card size by ~35% */
-  .wendo-carousel .wcard {
-    width: 250px;            /* 170px → +35% = ~230px */
-    padding: 0.7rem;
-    border-radius: 14px;
-  }
-
   /* Title size (slight increase only) */
-  /* .wendo-carousel .wcard h3 {
-    font-size: 1.05rem;
+  .wendo-carousel .wcard h3 {
+    font-size: 1rem;
     text-align: center;
-  } */
+  }
 
   /* Description text */
-  /* .wendo-carousel .wcard p {
-    font-size: 0.78rem;
+  .wendo-carousel .wcard p {
+    font-size: 0.75rem;
     line-height: 1.35;
     text-align: left;
-  } */
-
-  /* Increase image size by ~35% */
-  .wendo-carousel .wcard .wimg {
-    width: 100%;
-    max-width: 150px;        /* 100px → +35% = 135px */
-    height: 100px;            /* 70px → +35% = ~95px */
-    margin: 0 auto 0.6rem auto;
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
   }
-  
 }
 
 @keyframes fadeInPage {
