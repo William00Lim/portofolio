@@ -560,84 +560,70 @@ body::before{
 }
 
 @media (max-width:750px){
+  /* GENERAL */
   .container{padding:1.25rem 1.1rem;}
-
+  .menu-toggle{display:inline-block;}
   .main-nav{
-    position:absolute;
-    top:64px;
-    left:0;
-    right:0;
-    display:none;
-    flex-direction:column;
-    gap:0.6rem;
+    position:absolute; top:64px; left:0; right:0;
+    display:none; flex-direction:column; gap:0.6rem;
     padding:0.8rem 1.2rem;
     background:rgba(6,8,20,0.96);
     border-bottom:1px solid rgba(148,163,184,0.45);
   }
   .main-nav.open{display:flex;}
-  .menu-toggle{display:inline-block;}
-
   .skills-grid{grid-template-columns:1fr;}
-
-  /* keep contact cards in a row even on smaller screens */
   .row{flex-direction:column;}
   .contact-form{padding:1.2rem 1rem;}
 
-  .info-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  /* INFO CARDS */
+  .info-cards{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;
+  }
+  .info-card{
+    width:100%; max-width:280px; margin:0 auto;
   }
 
-  .info-card {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-  }
-  
-  .wendo-carousel .wcard {      
-    height: 425px;       
-    padding: 0.9rem;
-    left: 50%;
-    transform: translateX(-50%) scale(0.9);
-    border-radius: 16px;
-  }
-
-  /* Title text */
-  .wendo-carousel .wcard h3 {
-    font-size: 1rem;
-    text-align: center;
-    overflow-wrap: break-word;
-  }
-
-  /* Description text */
-  .wendo-carousel .wcard p {
-    font-size: 0.85rem;
-    line-height: 1;
-    text-align: center;
-    overflow-wrap: break-word;
-  }
-  
-  .wcard.left {
-    opacity: 0 !important;
-  }
-  
-  .wcard.center {
-    font-size: 0.85rem;
-    line-height: 1;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    opacity: 1 !important;
-    overflow-wrap: break-word;
-    z-index: 2;
-    background:rgba(10,10,20,0.75);  /* 90% opaque */
+  /* WENDO CAROUSEL CARDS */
+  .wendo-carousel .wcard{
+    position:absolute;
+    height:425px;
+    width:100%;
+    max-width:300px;
+    padding:0.9rem;
+    left:50%;
+    transform:translateX(-50%) scale(0.9);
+    border-radius:16px;
+    background:rgba(10,10,20,0.75);
     border:1px solid rgba(255,255,255,0.50);
     backdrop-filter:blur(50px);
   }
+
+  /* TEXT INSIDE WCARD */
+  .wendo-carousel .wcard h3{
+    font-size:1rem;
+    text-align:center;
+    margin-left:1px; /* ← SHIFT 1px TO THE RIGHT */
+    overflow-wrap:break-word;
+  }
   
-  .wcard.right {
-    opacity: 0 !important;
+  .wendo-carousel .wcard p{
+    font-size:0.85rem;
+    line-height:1.1;
+    text-align:center;
+    margin-left:1px; /* ← SHIFT 1px TO THE RIGHT */
+    overflow-wrap:break-word;
+  }
+
+  /* SHOW ONLY CENTER CARD */
+  .wcard.left,
+  .wcard.right{
+    opacity:0 !important;
+    pointer-events:none;
+  }
+
+  .wcard.center{
+    opacity:1 !important;
+    pointer-events:auto;
   }
 }
 
