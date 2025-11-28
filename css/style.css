@@ -600,7 +600,7 @@ body::before{
     height: 425px;       
     padding: 0.9rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.9);
     border-radius: 16px;
   }
 
@@ -627,6 +627,7 @@ body::before{
     /* left: 50% !important;
     transform: translateX(-50%) !important; */
     opacity: 1 !important;
+    text-align: center;
     overflow-wrap: break-word;
     /* z-index: 2; */
     background:rgba(10,10,20,0.75);  /* 90% opaque */
