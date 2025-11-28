@@ -621,31 +621,15 @@ body::before{
   display: none;
 }
 
-/* Prevent unwanted scroll */
+/* Prevent horizontal scrolling */
 html, body {
-  background: #000;
+  background-color: #02030a;
   overflow-x: hidden;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  overscroll-behavior: none; /* prevents white glow on overscroll */
 }
 
-/* Ensure layout never bleeds outside viewport */
+/* Make everything respect the viewport */
 * {
   box-sizing: border-box;
   max-width: 100vw;
 }
-
-/* Prevent white from animations */
-.slide-left,
-.slide-right {
-  background: #000;
-  overflow: hidden;
-}
-
-/* Prevent sections from having white background */
-section, .section, .container {
-  background: transparent;
-}
-
