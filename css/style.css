@@ -596,8 +596,7 @@ body::before{
     margin: 0 auto;
   }
   
-  .wendo-carousel .wcard {
-    width: 450px;         
+  .wendo-carousel .wcard {      
     height: 550px;       
     padding: 0.9rem;
     left: 50%;
@@ -620,14 +619,14 @@ body::before{
     overflow-wrap: break-word;
   }
 
-   .wendo-carousel.wcard.left {
+  .wcard.left {
     /* left: 0 !important;
     transform: translateX(-10px) !important; */
     opacity: 0 !important;
     /* z-index: 1; */
   }
 
-  .wendo-carousel.wcard.center {
+  .wcard.center {
     /* left: 50% !important;
     transform: translateX(-50%) !important; */
     opacity: 1 !important;
@@ -637,7 +636,7 @@ body::before{
     backdrop-filter:blur(50px);
   }
 
-  .wendo-carousel.wcard.right {
+  .wcard.right {
     /* left: calc(100% - 260px) !important;
     transform: translateX(10px) !important; */
     opacity: 0 !important;
