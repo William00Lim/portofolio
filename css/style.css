@@ -608,28 +608,21 @@ body::before{
     margin: 0 auto;
   }
   
-  /* Title size (slight increase only) */
+  .wendo-carousel .wcard {
+    width: 250px;
+    padding: 0.7rem;
+    border-radius: 14px;
+  }
+
   .wendo-carousel .wcard h3 {
     font-size: 0.75rem;
     text-align: center;
   }
-
-  /* Description text */
+  
   .wendo-carousel .wcard p {
     font-size: 0.5rem;
     line-height: 1;
     text-align: left;
-  }
-
-  /* Increase image size by ~35% */
-  .wendo-carousel .wcard .wimg {
-    /* width: 100%;
-    max-width: 135px; */
-    height: 250px;
-    margin: 0 auto 0.6rem auto;
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
   }
 }
 
