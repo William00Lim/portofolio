@@ -625,7 +625,7 @@ body::before{
     transform: translateX(-10px) !important;
     opacity: 1 !important;
     z-index: 1;
-  }
+  } */
 
   .wcard.center {
     left: 50% !important;
@@ -634,12 +634,12 @@ body::before{
     z-index: 2;
   }
 
-  .wcard.right {
+  /* .wcard.right {
     left: calc(100% - 260px) !important;
     transform: translateX(10px) !important;
     opacity: 1 !important;
     z-index: 1;
-  } */
+  }  */
 }
 
 @keyframes fadeInPage {
