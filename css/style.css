@@ -559,65 +559,67 @@ body::before{
   .skills-grid{grid-template-columns:repeat(2,1fr);}
 }
 
+/* ========== MOBILE FIX: RESET DESKTOP CAROUSEL ========== */
 @media (max-width:750px){
-  /* GENERAL */
-  .container{padding:1.25rem 1.1rem;}
-  .menu-toggle{display:inline-block;}
-  .main-nav{
-    position:absolute; top:64px; left:0; right:0;
-    display:none; flex-direction:column; gap:0.6rem;
-    padding:0.8rem 1.2rem;
-    background:rgba(6,8,20,0.96);
-    border-bottom:1px solid rgba(148,163,184,0.45);
-  }
-  .main-nav.open{display:flex;}
-  .skills-grid{grid-template-columns:1fr;}
-  .row{flex-direction:column;}
-  .contact-form{padding:1.2rem 1rem;}
 
-  /* INFO CARDS */
-  .info-cards{
-    display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;
-  }
-  .info-card{
-    width:100%; max-width:280px; margin:0 auto;
-  }
-
-  /* WENDO CAROUSEL CARDS */
-  .wendo-carousel .wcard{
-    min-height: 450px;   /* increase card height */
-    height: auto;        /* allow it to grow with content */
-    position:absolute;
-    padding:0.9rem;
-    left:50%;
-    transform:translateX(-50%);
-    border-radius:16px;
-    background:rgba(10,10,20,0.75);
-    border:1px solid rgba(255,255,255,0.50);
-    backdrop-filter:blur(50px);
-  }
-
-  /* TEXT INSIDE WCARD */
-  .wendo-carousel .wcard h3{
+  /* Wendo carousel: allow auto height, not fixed 650px */
+  .wendo-carousel{
     height: auto;
-    text-align:center;
-    overflow-wrap:break-word;
-  }
-  
-  .wendo-carousel .wcard p{
-    line-height:1.1;
-    text-align:center;
-    overflow-wrap:break-word;
+    padding: 1rem 0;
+    overflow: visible;
   }
 
-  /* SHOW ONLY CENTER CARD */
+  /* Reset all desktop transformations */
+  .wendo-carousel .wcard{
+    position: relative !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto 1.4rem auto !important;
+
+    padding: 1rem;
+    border-radius: 16px;
+
+    background: rgba(10,10,20,0.78);
+    border:1px solid rgba(255,255,255,0.18);
+
+    transform: none !important;
+    left: 0 !important;
+    opacity: 1 !important;
+
+    min-height: 420px;           /* MOBILE HEIGHT */
+    height: auto;                /* grow with content */
+  }
+
+  /* Fix titles */
+  .wendo-carousel .wcard h3{
+    font-size: 1rem;
+    text-align:center;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Fix text */
+  .wendo-carousel .wcard p{
+    font-size: 0.85rem;
+    text-align:left;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+  }
+
+  /* Fix images */
+  .wcard .wimg{
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    margin-bottom: 1rem;
+    background-size: cover;
+  }
+
+  /* SHOW ONLY CENTER CARD ON MOBILE??  
+     → Remove this, it breaks vertical stacking  
+     (If vertical stack is desired: remove these 3 lines)
+  */
   .wcard.left,
   .wcard.right{
-    opacity:0 !important;
-    pointer-events:none;
-  }
-
-  .wcard.center{
     opacity:1 !important;
     pointer-events:auto;
   }
