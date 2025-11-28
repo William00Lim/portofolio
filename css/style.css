@@ -617,7 +617,7 @@ body::before{
   /* 3. Shrink project-card size on mobile (30% smaller) */
   .project-card {
     width: 100%;
-    max-width: 200px;      
+    max-width: 150px;      
     margin: 0 auto;
     padding: 0.8rem 0.8rem;
     border-radius: 14px;
@@ -628,7 +628,8 @@ body::before{
   
   /* Shrink project image by 30% */
   .project-card img {
-    width: 70%;            
+    width: 100%;  
+    max-width: 50px;              
     height: auto;
     border-radius: 10px;
     display: block;
