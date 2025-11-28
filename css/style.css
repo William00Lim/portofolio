@@ -614,20 +614,25 @@ body::before{
     margin-bottom: 0.8rem;
   }
 
-  /* 3. Shrink project-card size on mobile */
+  /* 3. Shrink project-card size on mobile (30% smaller) */
   .project-card {
     width: 100%;
-    max-width: 200px;     /* shrink width */
-    margin: 0 auto;       /* center card */
-    padding: 0.8rem 0.8rem; /* reduce padding */
-    border-radius: 14px;    /* optional: slightly smaller corners */
+    max-width: 200px;      
+    margin: 0 auto;
+    padding: 0.8rem 0.8rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
-  /* If project-card contains images, shrink them too */
+  
+  /* Shrink project image by 30% */
   .project-card img {
-    max-width: 100%;
+    width: 70%;            
     height: auto;
     border-radius: 10px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
