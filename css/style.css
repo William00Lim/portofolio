@@ -623,7 +623,9 @@ body::before{
 
   /* Increase image size by ~35% */
   .wendo-carousel .wcard .wimg {
-    height: 150px;            /* 70px → +35% = ~95px */
+    /* width: 100%;
+    max-width: 135px; */
+    height: 250px;
     margin: 0 auto 0.6rem auto;
     background-size: cover;
     background-position: center;
